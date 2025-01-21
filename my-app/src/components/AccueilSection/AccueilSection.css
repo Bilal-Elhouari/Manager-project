@@ -1,0 +1,112 @@
+/* Section Accueil */
+.section-accueil {
+  background: transparent;
+}
+
+.accueil-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 150px;
+  border-radius: 15px;
+  margin: 20px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  flex-wrap: wrap; /* Permet de passer les éléments à la ligne si nécessaire */
+}
+
+.text-content {
+  flex: 1;
+  max-width: 50%;
+}
+
+.text-content h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 0;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.highlight {
+  color: #007aff;
+  transition: color 0.3s ease;
+}
+
+.text-content p {
+  font-size: 1.2rem;
+  margin: 30px 0 20px 0;
+  color: #1c1c1e;
+  transition: color 0.3s ease;
+  text-align: left;
+}
+
+.light-mode .text-content p {
+  color: #1c1c1e;
+}
+
+.dark-mode .text-content p {
+  color: #ffffff;
+}
+
+/* Bouton */
+.cta-button {
+  background-color: #ea00ff;
+  color: #ffffff;
+  padding: 20px 40px;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+.cta-button:hover {
+  background-color: #0063cc;
+}
+
+.text-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.text-content .cta-button {
+  align-self: flex-start;
+}
+
+/* Image */
+.image-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+}
+
+.landing-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .accueil-content {
+    flex-direction: column; /* Passe les éléments en colonne */
+    padding: 20px; /* Réduit le padding */
+  }
+
+  .text-content {
+    max-width: 100%; /* Permet au texte d'occuper toute la largeur */
+    margin-bottom: 20px; /* Ajoute de l'espace entre texte et image */
+  }
+
+  .landing-image {
+    max-width: 100%; /* Assure que l'image s'adapte */
+    border-radius: 15px;
+  }
+}

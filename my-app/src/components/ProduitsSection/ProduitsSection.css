@@ -1,0 +1,245 @@
+/* Styles pour le conteneur principal */
+.container {
+    display: flex;
+    height: 100vh; /* Hauteur totale de la vue */
+  }
+  
+  /* Styles pour la sidebar */
+  .sidebar {
+    width: 200px;
+    height: 1050px; /* Hauteur de la sidebar */
+    background-color: #1c1c1e; /* Couleur de fond sombre par défaut */
+    color: #ffffff; /* Texte en blanc par défaut */
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transition pour le mode sombre/clair */
+    border-radius: 0 15px 15px 0; /* Bords arrondis en bas */
+    margin-right: 20px; /* Espace entre la sidebar et la section principale */
+  }
+  
+  /* Mode clair pour la sidebar */
+  .light-mode .sidebar {
+    background-color: #ffffff; /* Fond clair */
+    color: #2c3e50; /* Texte sombre */
+  }
+  
+  /* Conteneur du logo */
+  .logo-container {
+    text-align: center; /* Centrer le logo */
+    margin-bottom: 20px; /* Espacement en bas */
+  }
+  
+  .navbar-logo {
+    width: 80px; /* Ajustez la taille du logo */
+    height: auto; /* Conserve les proportions */
+  }
+  
+  /* En-tête de la sidebar */
+  .sidebar-header {
+    margin-bottom: 30px;
+    text-align: center; /* Centrer le texte */
+  }
+  
+  .sidebar-header h1 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .inbox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+    padding: 10px;
+    background-color: #34495e; /* Fond légèrement plus clair par défaut */
+    border-radius: 5px;
+    transition: background-color 0.3s ease; /* Transition pour le mode sombre/clair */
+  }
+  
+  /* Mode clair pour la boîte de notification */
+  .light-mode .inbox {
+    background-color: #f0f0f0; /* Fond clair */
+    color: #2a3138; /* Texte sombre */
+  }
+  
+  .notification {
+    background-color: #e74c3c; /* Couleur de notification rouge */
+    color: #ffffff;
+    padding: 5px 10px;
+    border-radius: 50%;
+    font-size: 0.8rem;
+  }
+  
+  /* Sections de la sidebar */
+  .sidebar-section {
+    margin-bottom: 30px;
+    text-align: center; /* Centrer le texte */
+  }
+  
+  .sidebar-section h2 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+  }
+  
+  .sidebar-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sidebar-section li {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    padding: 8px;
+    background-color: #2a3138; /* Fond légèrement plus clair par défaut */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transition pour le mode sombre/clair */
+  }
+  
+  /* Mode clair pour les éléments de la sidebar */
+  .light-mode .sidebar-section li {
+    background-color: #f0f0f0; /* Fond clair */
+    color: #0b0c0c; /* Texte sombre */
+  }
+  
+  /* Couleur de survol en mode sombre */
+  .sidebar-section li:hover {
+    background-color: #0a84ff; /* Couleur de survol en mode sombre */
+    color: #ffffff; /* Texte en blanc au survol */
+  }
+  
+  /* Couleur de survol en mode clair */
+  .light-mode .sidebar-section li:hover {
+    background-color: #711e8a; /* Couleur de survol en mode clair */
+    color: #ffffff; /* Texte en blanc au survol */
+  }
+  
+  /* Styles pour la section Produits */
+  .section-produits {
+    flex: 1; /* Prend tout l'espace restant */
+    padding: 20px;
+    background-color: #f9f9f9; /* Fond clair pour le contenu principal */
+    text-align: center; /* Centrer le texte */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transition pour le mode sombre/clair */
+    margin-left: 20px; /* Espace entre la sidebar et la section principale */
+  }
+  
+  .section-produits h2 {
+    font-size: 2rem;
+    color: #333;
+  }
+  
+  .section-produits p {
+    font-size: 1.2rem;
+    color: #666;
+  }
+  
+  /* Mode sombre pour la section Produits */
+  .dark-mode .section-produits {
+    background-color: #1c1c1e; /* Fond sombre */
+    color: #ffffff; /* Texte en blanc */
+  }
+  
+  .dark-mode .section-produits h2 {
+    color: #ffffff; /* Texte en blanc */
+  }
+  
+  .dark-mode .section-produits p {
+    color: #cccccc; /* Texte gris clair */
+  }
+  
+
+/* Conteneur principal de la grille */
+.dashboard-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 colonnes par défaut */
+    gap: 20px; /* Espacement entre les cartes */
+    margin-top: 20px;
+}
+
+/* Styles des cartes */
+.produits-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 0px;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    height: 455px; /* Hauteur agrandie des cartes */
+    width: 100%; /* Largeur de la carte à 100% pour s'adapter au conteneur */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Espacement interne */
+}
+
+.produits-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Graphiques */
+.project-chart {
+    height: 350px; /* Hauteur des graphiques */
+    width: 100%; /* Largeur de la carte */
+    margin: auto; /* Centrer */
+}
+
+/* Mode sombre */
+.dark-mode .card {
+    background-color: #1c1c1e;
+    color: #ffffff;
+}
+
+.dark-mode .project-chart {
+    background-color: #2a2a2b;
+    color: #cccccc;
+}
+
+/* Adaptation pour les écrans plus petits */
+@media (max-width: 1200px) {
+    .dashboard-container {
+        grid-template-columns: 1fr; /* Une seule colonne pour les écrans moyens */
+    }
+
+    .produits-card {
+        width: 100%; /* Largeur de la carte à 100% */
+        height: auto; /* Hauteur automatique pour s'adapter au contenu */
+    }
+
+    .project-chart {
+        height: 250px; /* Réduire la hauteur des graphiques */
+    }
+}
+
+@media (max-width: 768px) {
+    .dashboard-container {
+        grid-template-columns: 1fr; /* Une seule colonne pour les petits écrans */
+    }
+
+    .sidebar {
+        width: 150px; /* Largeur réduite sur les petits écrans */
+    }
+
+    .section-produits {
+        margin-left: 170px; /* Espacement réduit sur les petits écrans */
+    }
+
+    .produits-card {
+        width: 100%; /* Largeur de la carte à 100% */
+        height: auto; /* Hauteur automatique pour s'adapter au contenu */
+    }
+
+    .project-chart {
+        height: 200px; /* Réduire davantage la hauteur des graphiques */
+    }
+}
+
+@media (max-width: 480px) {
+    .produits-card {
+        padding: 10px; /* Ajouter un peu de padding pour les très petits écrans */
+    }
+
+    .project-chart {
+        height: 150px; /* Hauteur minimale pour les graphiques */
+    }
+}
